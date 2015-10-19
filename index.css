@@ -1,0 +1,67 @@
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+}
+
+table {
+    overflow: hidden;
+    border-collapse: collapse;
+}
+
+tr:nth-child(2n) { /*нечётные за счёт того, что первый ряд с заголовками пропускаем*/
+    background-color: #f7f7f7;
+}
+
+td:first-child, td:nth-child(2), td:nth-child(7), td:nth-child(8) {
+    text-align: center;
+}
+
+td, th {
+    position:relative;
+    width: 125px;
+}
+
+th {
+    background-color: white;
+}
+
+tr:hover {
+    background-color: #e5faf2;
+}
+
+td:hover {
+    background-color: #b9cee0;
+}
+
+td:hover:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -600px;
+    left: 0;
+    background: #cfc;
+    z-index: -1;
+    width: 127px;
+    height: 3000px;
+}
+
+img.logo {
+    width: 125px;
+}
+
+.cancelled {
+    color: #ff524a;
+    font-weight: bold;
+}
+
+input:invalid {
+    border-color: #ff524a;
+}
+
+button {
+    display: none;
+}
+
+input:valid + input:valid + br + button {
+    display: inline-block;
+}
