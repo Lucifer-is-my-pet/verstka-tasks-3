@@ -108,10 +108,10 @@ input:invalid
 
 button
 {
-    display: none;
+    visibility: hidden;
 }
 
 input:valid + input:valid + br + button
 {
-    display: inline-block;
+    visibility: visible;
 }
