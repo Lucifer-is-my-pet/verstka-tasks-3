@@ -1,39 +1,49 @@
-body {
+body
+{
     font-family: Verdana, sans-serif;
     font-size: 14px;
 }
 
-table {
+table
+{
     overflow: hidden;
     border-collapse: collapse;
 }
 
-tr:nth-child(2n) { /*нечётные за счёт того, что первый ряд с заголовками пропускаем*/
+/*нечётные за счёт того, что первый ряд с заголовками пропускаем*/
+tr:nth-child(2n)
+{
     background-color: #f7f7f7;
 }
 
-td:first-child, td:nth-child(2), td:nth-child(7), td:nth-child(8) {
+td:first-child, td:nth-child(2), td:nth-child(7), td:nth-child(8)
+{
     text-align: center;
 }
 
-td, th {
-    position:relative;
+td, th
+{
+    position: relative;
     width: 125px;
 }
 
-th {
+th
+{
     background-color: white;
 }
 
-tr:hover {
+tr:hover
+{
     background-color: #e5faf2;
 }
 
-td:hover {
+td:hover
+{
     background-color: #b9cee0;
 }
 
-td:hover:after {
+td:hover:after
+{
     content: '';
     display: block;
     position: absolute;
@@ -45,23 +55,63 @@ td:hover:after {
     height: 3000px;
 }
 
-img.logo {
+img.logo
+{
     width: 125px;
 }
 
-.cancelled {
+.cancelled
+{
     color: #ff524a;
     font-weight: bold;
 }
 
-input:invalid {
+p
+{
+    font-weight: bold;
+}
+
+[value="Прилёт"]:not(:checked) ~ table tr.in
+{
+    /*display: none;*/
+    visibility: hidden;
+}
+
+[value="Вылет"]:not(:checked) ~ table tr.out
+{
+   /* display: none;*/
+    visibility: hidden;
+}
+
+[value="d"]:not(:checked) ~ table tr.d
+{
+    /* display: none;*/
+    visibility: hidden;
+}
+
+[value="e"]:not(:checked) ~ table tr.e
+{
+    /* display: none;*/
+    visibility: hidden;
+}
+
+[value="f"]:not(:checked) ~ table tr.f
+{
+    /* display: none;*/
+    visibility: hidden;
+}
+
+input:invalid
+{
     border-color: #ff524a;
 }
 
-button {
+button
+{
     display: none;
 }
 
-input:valid + input:valid + br + button {
+input:valid + input:valid + br + button
+{
     display: inline-block;
 }
