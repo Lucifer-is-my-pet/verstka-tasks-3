@@ -27,19 +27,35 @@ td, th
     width: 125px;
 }
 
+th {
+    z-index: 3;
+    background-color: #adcbf9;
+}
+
 tr:hover
 {
     background-color: #d4e2e5;
 }
 
-tr:first-child
+/*tr:first-child
 {
     background-color: #adcbf9;
-}
 
-td:hover
+}*/
+
+/*td:hover span
 {
     background-color: #b9cee0;
+    display: block;
+    height: 35px;
+    width: 125px;
+    z-index: 3;
+}*/
+
+span
+{
+    z-index: 2;
+    position: inherit;
 }
 
 td:hover:after
@@ -50,7 +66,7 @@ td:hover:after
     top: -600px;
     left: 0;
     background: #b4e3b4;
-    z-index: -1;
+    z-index: 1;
     width: 127px;
     height: 3000px;
 }
@@ -73,32 +89,32 @@ p
 
 [value="Прилёт"]:not(:checked) ~ table tr.in
 {
-    /*display: none;*/
-    visibility: hidden;
+    display: none;
+    /*visibility: hidden;*/
 }
 
 [value="Вылет"]:not(:checked) ~ table tr.out
 {
-   /* display: none;*/
-    visibility: hidden;
+    display: none;
+    /* visibility: hidden;*/
 }
 
 [value="d"]:not(:checked) ~ table tr.d
 {
-    /* display: none;*/
-    visibility: hidden;
+    display: none;
+    /* visibility: hidden;*/
 }
 
 [value="e"]:not(:checked) ~ table tr.e
 {
-    /* display: none;*/
-    visibility: hidden;
+    display: none;
+    /* visibility: hidden;*/
 }
 
 [value="f"]:not(:checked) ~ table tr.f
 {
-    /* display: none;*/
-    visibility: hidden;
+    display: none;
+    /* visibility: hidden;*/
 }
 
 input:invalid
