@@ -87,34 +87,13 @@ p
     font-weight: bold;
 }
 
-[value="Прилёт"]:not(:checked) ~ table tr.in
-{
-    display: none;
-    /*visibility: hidden;*/
-}
-
-[value="Вылет"]:not(:checked) ~ table tr.out
-{
-    display: none;
-    /* visibility: hidden;*/
-}
-
-[value="d"]:not(:checked) ~ table tr.d
-{
-    display: none;
-    /* visibility: hidden;*/
-}
-
-[value="e"]:not(:checked) ~ table tr.e
-{
-    display: none;
-    /* visibility: hidden;*/
-}
-
+[value="Прилёт"]:not(:checked) ~ table tr.in,
+[value="Вылет"]:not(:checked) ~ table tr.out,
+[value="d"]:not(:checked) ~ table tr.d, [value="e"]:not(:checked) ~ table tr.e,
 [value="f"]:not(:checked) ~ table tr.f
 {
     display: none;
-    /* visibility: hidden;*/
+    /*visibility: hidden;*/
 }
 
 input:invalid
@@ -127,7 +106,7 @@ button
     visibility: hidden;
 }
 
-input:valid + input:valid + br + button
+form:valid button
 {
     visibility: visible;
 }

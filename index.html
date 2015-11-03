@@ -7,12 +7,17 @@
     </head>
     <body>
         <p>Фильтр по типу рейса</p>
-            <input name="type" type="checkbox" value="Прилёт" checked>Прилёт<br>
-            <input name="type" type="checkbox" value="Вылет" checked>Вылет
+        <input id="in" name="type" type="checkbox" value="Прилёт" checked>
+        <label for="in">Прилёт</label><br>
+        <input id="out" name="type" type="checkbox" value="Вылет" checked>
+        <label for="out">Вылет</label>
         <p>Фильтр по терминалу</p>
-            <input name="gate" type="checkbox" value="d" checked>Терминал D<br>
-            <input name="gate" type="checkbox" value="e" checked>Терминал E<br>
-            <input name="gate" type="checkbox" value="f" checked>Терминал F<br><br>
+        <input id="d" name="gate" type="checkbox" value="d" checked>
+        <label for="d">Терминал D</label><br>
+        <input id="e" name="gate" type="checkbox" value="e" checked>
+        <label for="e">Терминал E</label><br>
+        <input id="f" name="gate" type="checkbox" value="f" checked>
+        <label for="f">Терминал F</label><br><br>
         <table><!--чекбоксы, так как значение переключателя не сбросить без формы, а с формой всё ломается-->
             <tr>
                 <th><span>Тип</span></th>
@@ -192,11 +197,11 @@
                 <td><span>В пути</span></td>
             </tr>
         </table><br>
-        <form>
+        <form action="..." method="POST" enctype="text/plain" id="myform">
             <input id="email" name="email" type="email" placeholder="Email" required>
             <input id="phone" name="phone" type="tel" placeholder="Телефон"
                     pattern="^(\+7|8)\d{10}$" required><br>
-            <button type="submit"></span>Отправить данные о рейсе на телефон</button>
+            <button type="submit">Отправить данные о рейсе на телефон</button>
         </form>
         <!-- Поле для фильтрации по городу
         <input
